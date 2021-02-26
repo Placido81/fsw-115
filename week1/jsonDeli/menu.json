@@ -1,0 +1,64 @@
+{
+   "menu":[{
+      
+         "appetizers": [{
+            "name": "salad",
+            "description": "mix all ingredients in a bowl",
+            "ingredients": ["garden greens", "garden vegetables"]
+         
+         },
+            {"name": "potatoe skins",
+            "description": "Potatoes cut in half & put in oeven on bake till light brown",
+            "ingredients": ["cheese", "sour cream", "bacon bites"]
+         }],
+
+         "coldSandwhiches":[{
+            
+                  "name": "italian grinder",
+                  "description": "Meat sliced thin and cut in half",
+                  "ingredients": ["ham", "salami", "pepperoni", "cheese", "oil & vinager"]
+            },
+            
+
+                  {
+                     "name": "ham & cheese",
+                     "description": "You can choose what type of ham you want, also you can have Soft Roll or Hard Roll.",
+                     "ingredients": ["Ham sliced thin", "american cheese", "lettuce", "tomatoe", "mayo",  "mustard"]
+                  
+               }],
+               "hotSandwhiches": [{
+                  "name": "steak & cheese",
+                  "description": "Put cheese on sandwhich and Heat in oven",
+                  "ingredients": ["shaved steak", "onions", "cheese"]
+               },
+               
+
+                  {
+                     "name": "pastrami & cheese",
+                     "description": "Meat sliced thin put in Roll throw in oven",
+                     "ingredients": ["pastrami", "chesse", "lettuce", "tomatoe", "mustard"]
+
+                  }]
+               }],
+            
+                "dessert": [{
+                   "name": "hot fudge sundea",
+                   "description": "put ice cream in glass bowl",
+                   "ingredients": ["vanilla ice cream", "hot fudge","whipped cream"]
+                },
+                {"name": "choclate cream pie",
+                  "description": "put in pie dish and store in refridgerator",
+                  "ingredients": ["choclate pudding", "whipped cream"]
+               
+               }],
+               "drinks":[{
+                  "name": "orange juice",
+                  "description": "juice from a orange",
+                  "ingredients": ["oranges", " additives"]
+               }]
+
+
+
+         }
+               
+      

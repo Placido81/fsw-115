@@ -1,0 +1,33 @@
+
+
+html,
+body{
+    text-align: center;
+    list-style: none;
+    overflow: scroll;
+    background-color: dodgerblue;
+    color: white;
+    font-size: 35px;
+    word-spacing: 6px;
+
+}
+
+
+
+h1 {
+    color:white;
+    
+    font-size: 80px;
+    font-family: 'DotGothic16', sans-serif;
+    text-align: center;
+    
+}
+#button{
+    margin-left: 10%;
+    padding: 10px;
+    font-size: large;
+    border-radius: 30px;
+ background-color: gold;
+ color: mediumvioletred;
+}
+

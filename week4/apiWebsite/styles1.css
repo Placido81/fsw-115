@@ -1,0 +1,29 @@
+html,
+body{
+    margin: 0;
+}
+h1{
+    text-align: center;
+    font-family: monospace;
+    font-size: 65px;
+    border-bottom: 10px dotted black;
+    width: 60%;
+    padding: 30px;
+    margin: 40px;
+    margin-left: 180px;
+}
+div{
+    text-align: center;
+    font-family: monospace;
+    font-size: 35px;
+}
+button{
+    font-size: 25px;
+    align-content: center;
+    color: white;
+    background-color: black;
+    border-radius: 50px;
+    margin-right: 100px;
+    padding: 5px;
+    margin: 20px;
+}

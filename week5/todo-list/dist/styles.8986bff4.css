@@ -1,59 +1,90 @@
+
+
 header{
   text-align: center;
-  margin-bottom: 15vh;
-  margin-left: 20vh;
-  font-size: 40px;
+  margin-bottom: 10vh;
+  margin-left: 35vh;
+  font-size: 50px;
   background-color: #708090;
   color:#708090;
-  
+}
 
+h1::first-letter{
+  color: red;
+  font-size: 150px;
 }
 h1{
-  margin-left: 8vh;
+  
 text-align: center;
 
 color:#F5FFFA;
-padding-bottom: 20px;
-border-bottom: 10px ridge #F5FFFA;
+
 width:70%;
   
 }
+#forms{
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+
+  
+}
+
 body {
     background-color: #708090;
-    padding: 50px;
-    border: 2px solid white;
-    color: white;
-  }
-  form{
-    margin-left: 17%;
-    
-    
-    
-  }
-  li {
-    list-style: none;
-    text-align: center;
-    width: 50%;
-    margin-left: 20%;
-    
-  }
-  input{
     padding: 10px;
-    width: 70%;
-    margin-right: 10%;
-    display: grid;
+    
+    color: white;
+    padding-top: 30px;
     
   }
+
+
+  input[type="text"], input[type="number"] {
+    height: 10px;
+   width: 200px;
+    border: none;
+    padding: 10px;
+    margin-left: 5%;
+}
+
+ button:hover{
+   background-color: dodgerblue;;
+ }
 button{
-    padding: 20px;
-    margin-left: 30%;
-    margin-top: 5%;
-    font-size: large;
+    padding-left: 5px; 
+    font-size: 15px;
+   margin-left: 30px;
+    margin-top:10px;
+    width: 7%;
+    border-style: none;
     border-radius: 50%;
-     background-color: gold;
-     color: red;
+    height: 60px;
+     background-color: firebrick;
+     color: white;
+     
   }
-    
+  #submit{
+    margin-top:20px;
+    margin-right: 20px;
+  }
+ul {
+  box-sizing: border-box;
+  border: 2px solid white;
+  margin-left: 10%;
+  width: 80%;
   
+}
+li {
+  border-bottom: 2px solid white;
+
+  width: 80%;
+  text-decoration: none;
+  font-size: large;
+  padding-top: 10px;
+  margin-left: 2%;
+  overflow: hidden;
+
+}
 
 /*# sourceMappingURL=/styles.8986bff4.css.map */

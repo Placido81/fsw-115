@@ -1,136 +1,120 @@
-import 'regenerator-runtime/runtime'
-import axios from 'axios'
-
-// GET....
-const BASE_URL = "https://api.vschool.io/mark.olivo/todo";
-
-const getTodoItems = async () => {
-  try {
-    const response = await axios.get(`${BASE_URL}`);
-
-    const todoItems = response.data;
+const form = document.getElementById("forms");
+//GET REQUEST
+axios.get("https://api.vschool.io/Mark_Olivo/todo")
+.then(response => {
+    for (let i = 0; i < response.data.length; i++) {
+    //TODO LIST TEXT
+    const li = document.createElement("li");
+    const ul = document.getElementsByTagName("ul")[0];
+    ul.prepend(li);
+    li.classList = "list";
+    const h2 = document.createElement("h2");
+    h2.textContent = response.data[i].title;
+    li.appendChild(h2);
+    const h3 = document.createElement("h3");
+    h3.textContent =  "- " + response.data[i].description;
+    li.appendChild(h3);
+    const h4 = document.createElement("h4");
+    h4.textContent = "$ " + response.data[i].price;
+    li.appendChild(h4);
+    //CHECKBOX - LINE-THROUGH
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.name = "checkbox";
+    checkbox.id = response.data[i]._id;
+    li.appendChild(checkbox);
+    if (response.data[i].completed === true) {
+        checkbox.checked = true;
+        h2.style.textDecorationLine = "line-through";
+        h3.style.textDecorationLine = "line-through";
+        h4.style.textDecorationLine = "line-through";
+    }
+    //CHECKBOX - EVENT LISTENER
+    checkbox.addEventListener("click", (event) => {
+        let updates;
+        if (checkbox.checked) {
+            updates = true;
+        } else {
+            updates = false;
+        }
+        axios.put("https://api.vschool.io/Mark_Olivo/todo/" + event.currentTarget.id, {completed:updates})
+        .then(response => {response.data
+        location.reload()})
+        .catch(error => console.log(error))
+    })
+    //DELETE BUTTON
+    const button = document.createElement("button");
+    button.textContent = "Delete";
+    button.id = response.data[i]._id;
+    li.appendChild(button);
     
-    console.log(`GET: Here's the list of todos`, todoItems);
-
-    return todoItems;
-  } catch(error) {
-    console.error(error);
-  }
-};
-
-
-
-const createTodoElement = item => {
-  const todoElement = document.createElement('li');
-  todoElement.id = item._id;
-  
-  todoElement.appendChild(document.createTextNode(item.title));
-  todoElement.appendChild(document.createTextNode(item.description));
-
-  const button = document.createElement("button")
-  button.textContent= "X"
-  todoElement.append(button)
-  todoElement.id = item._id;
-  
-  button.onclick = async event => await removeTodoElement(event, todoElement);
-  
-
-  
-  return todoElement;
-
-  
-};
-
-const updateTodoList = todoItems => {
-  const todoList = document.querySelector('ul');
-
-  if (Array.isArray(todoItems) && todoItems.length > 0) {
-    todoItems.map(todoItem => {
-      todoList.appendChild(createTodoElement(todoItem));
-    });
-  } else if (todoItems) {
-    todoList.appendChild(createTodoElement(todoItems));
-  }
-};
-
-const main = async () => {
-  updateTodoList(await getTodoItems());
-};
-
-main();
-
-
-
-const form = document.querySelector('form');
-
-form.addEventListener('submit', async event => {
-  event.preventDefault();
-
-  const title = document.querySelector('#new-todos__title').value;
-  const description = document.querySelector('#newDescrip').value;
-  const price = document.querySelector('#newPrice').value;
-
-
-  const todo = {
-    userId: 1,
-    title: title,
-    description: description,
-    price: price,
-    completed: false
-  };
-
-  const submitTodoItem = await addTodoItem(todo);
-  updateTodoList(submitTodoItem);
-});
-
-// Post...
-
-export const addTodoItem = async todo => {
-  try {
-    const response = await axios.post(`${BASE_URL}`, todo);
-    const newTodoItem = response.data;
-
-    console.log(`Added a new Todo!`, newTodoItem);
-
-    return newTodoItem;
-  } catch (error) {
-    console.error(error);
-  }
-};
-
-
-// Delete...
-export const deleteTodoItem = async id => {
-  try {
-    console.log("id", id)
-    const response = await axios.delete(`${BASE_URL}/${id}`);
-    console.log(`Deleted Todo ID: `, id);
-
-    return response.data;
-  } catch (error) {
-    console.error(error);
-  }
-};
-
-
-
-  export const removeTodoElement = async (event, element) => {
-  console.log("element", element)
-  event.target.parentElement.parentElement.removeChild(element);
-  const id = element.id;
-console.log("id",id)
-  await deleteTodoItem(id);
-};
-
-
-// export const createTodoElement = item => {
-  // const todoElement = document.createElement('li');
-
-//   todoElement.id = item.id;
-//   todoElement.appendChild(document.createTextNode(item.title));
-
-//   todoElement.onclick = async event => await removeTodoElement(event, todoElement);
-
-//   return todoElement;
-// };
-
+    button.addEventListener("click", (event) => {
+        axios.delete("https://api.vschool.io/Mark_Olivo/todo/" + event.currentTarget.id)
+            .then(response => {response.data
+            location.reload()
+            })
+            .catch(error => console.log(error))
+    })
+    
+    const edit = document.createElement("button");
+    edit.textContent = "Edit";
+    
+    edit.id = response.data[i]._id;
+    li.appendChild(edit);
+    //SUBMIT BUTTON
+    const submits = document.createElement("button");
+    submits.textContent = "Submit";
+    
+    submits.id = response.data[i]._id;
+    
+    edit.addEventListener("click", (e) => {
+        const x = document.getElementById("enterbox");
+        if (x.style.display == "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "block";
+        }
+        li.appendChild(submits);
+    })
+    //SUBMIT EDIT - EVENT LISTENER - PUT
+    submits.addEventListener("click", (event) => {
+        let t = document.getElementById("titleInput").value;
+        let d = document.getElementById("detailsInput").value;
+        let p = document.getElementById("numberInput").value;
+        if (t.length === 0) {
+        t = response.data[i].title;
+        }
+        if (d.length === 0) {
+        d = response.data[i].description;
+        }
+        if (p.length === 0) {
+        p = response.data[i].price;
+        }
+        axios.put("https://api.vschool.io/Mark_Olivo/todo/" + event.currentTarget.id, {
+            title:t,
+            description:d,
+            price:p
+            })
+            .then(response => {response.data
+            location.reload()
+            })
+            .catch(error => console.log(error))
+    })
+}
+})
+.catch(error => console.log(error))
+// NEW TODO - POST
+form.addEventListener("submit", function(event){
+    event.preventDefault();
+    const newTodo = {
+        title: form.title.value,
+        description: form.description.value,
+        price: form.price.value
+    }
+    axios.post("https://api.vschool.io/Mark_Olivo/todo", newTodo)
+        .then(response => {response.data
+        form.reset()
+        location.reload()
+        })
+        .catch(error => console.log(error))
+})

@@ -6,37 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> ToDo App </title>   
     <link rel="stylesheet" href="/styles.8986bff4.css">
-       <script src="/styles.8986bff4.js"></script></head>
-
-          <header>
-              <h1>To-Do List</h1>
-          </header>
-          <div id="new-todos">
+    <script src="/styles.8986bff4.js"></script></head>
+    <header>
+            <h1>To-Do List</h1>
+        </header>
+        <div class="enterBox">
+            <form id="forms">
               
-                  <form id="addTodoForm">
-
-                    
-                      <input type="text" id="new-todos__title" name="title" placeholder="Title">
-                      <input type="text" id="newDescrip" name="description" placeholder="Description">
-                      <input type="number" id="newPrice" name="price" placeholder="Price" min="0">
-                      <button id="todoAdd" type="submit">ADD</button>
-                  </form>
-                  
-                  <ul>
-
-                </ul>
-              </div>
-              <div id="todoDiv"></div>
-              <div id="todoFooter">
-                  <div id="taskbar"></div>
-                 
-                  
-                
-          
-              </div>
-      
-      
-      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-      <script src="/app.c328ef1a.js"></script>
+                <input class="addtodo" type="text" name="title" placeholder="New Task...">
+                <input class="addtodo" type="text" name="description" placeholder="Details..">
+                <input class="addtodo" type="number" name="price" placeholder="Price..">
+                <br>
+                <button type="submit" id="submit">ADD</button>
+            </form>
+        </div>
+        <div class="alltasks">
+            <ul></ul>
+        </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/app.c328ef1a.js"></script>
     
 </html>

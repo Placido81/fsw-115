@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ToDo App </title>   
+    <link rel="stylesheet" href="styles.css"/>
+       </head>
+
+          <header>
+              <h1>To-Do List</h1>
+          </header>
+          <div id="new-todos">
+              
+                  <form id="addTodoForm">
+
+                    
+                      <input type="text" id="new-todos__title" name="title" placeholder="Title">
+                      <input type="text" id="newDescrip" name="description" placeholder="Description">
+                      <input type="number" id="newPrice" name="price" placeholder="Price" min=0>
+                      <button id="todoAdd" type="submit">ADD</button>
+                  </form>
+                  
+                  <ul>
+
+                </ul>
+              </div>
+              <div id="todoDiv"></div>
+              <div id="todoFooter">
+                  <div id="taskbar"></div>
+                 
+                  
+                
+          
+              </div>
+      </div>
+      
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <script src="app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+    
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
+    
+  },
+  "name": "todo-list",
+  "version": "1.0.0",
+  "main": "app.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+
+}

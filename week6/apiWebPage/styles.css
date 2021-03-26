@@ -1,0 +1,84 @@
+
+
+@media only screen and (min-width: 328px) and (max-width: 1700px) {
+
+
+
+
+.title1:first-letter{
+    color:#FD3C07;
+    font-size: 130px;
+}
+.title:hover{
+    letter-spacing: 10px;
+}
+.title1{
+    color: #B7C9E2;
+    text-align: center;
+    padding: 0px;
+    margin-left:20%;
+    max-width: 150vh;
+    font-size: 75px;
+    font-style:Times New Roman Regular;
+    text-shadow: 2px 2px white;
+        
+        transition-duration: 1ms;
+        border-bottom: 3px ridge #B7C9E2;
+        width: 55%;
+        
+        
+}
+
+#icon{
+    box-shadow:  10px 10px 20px #d5d5d5,
+             -10px -10px 20px #ebebeb;
+   border: 3px solid #B7C9E2;
+    margin-left: 23em;
+   
+    
+    
+    
+}
+body{
+    background: linear-gradient(to right, #005c97, #363795); 
+    border: 10px dotted whitesmoke;
+    margin: 15px;
+    padding: 10px;
+    
+}
+h1:hover{
+    color:#FFFD78;
+  letter-spacing: 10px;
+
+}
+h1{
+color:#FFFFE4;
+text-align: center;
+font-style:Times New Roman Regular;
+font-size: 65px;
+
+
+}
+h2:hover{
+    color:#01F9C6;
+    letter-spacing: 10px;
+}
+h2{
+    color: whitesmoke;
+    text-align: center;
+    font-size: 45px;
+    
+
+}
+h3:hover{
+    letter-spacing: 10px;
+    color: #FE019A;
+}
+h3{
+    color:lemonchiffon;
+    text-align: center;
+    font-size: 20px;
+    font-size: 35px;
+    
+}
+}

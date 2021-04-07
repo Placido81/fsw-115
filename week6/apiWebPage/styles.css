@@ -1,6 +1,6 @@
 
 
-@media only screen and (min-width: 328px) and (max-width: 1700px) {
+@media only screen and (min-width: 250px) and (max-width: 1700px) {
 
 
 
@@ -16,7 +16,7 @@
     color: #B7C9E2;
     text-align: center;
     padding: 0px;
-    margin-left:20%;
+    margin-left:22%;
     max-width: 150vh;
     font-size: 75px;
     font-style:Times New Roman Regular;
@@ -33,7 +33,7 @@
     box-shadow:  10px 10px 20px #d5d5d5,
              -10px -10px 20px #ebebeb;
    border: 3px solid #B7C9E2;
-    margin-left: 23em;
+    margin-left: 25em;
    
     
     

@@ -1,0 +1,110 @@
+header:hover{
+    transform: translateY(-20px);
+}
+header{
+    text-align: center;
+    margin-bottom: 10vh;
+    margin-left: 68vh;
+    padding: 10px;
+    
+    font-size: 50px;
+    background-color: #A69B03;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    box-shadow:
+  0 0px 10.7px -20px whitesmoke,
+  0 0px 19.7px -20px whitesmoke,
+  0 0px 27.9px -20px whitesmoke,
+  0 0px 37px -20px whitesmoke,
+  0 0px 51.6px -20px whitesmoke,
+  0 0px 86.3px -20px whitesmoke,
+  0 0px 295px -20px whitesmoke
+;
+
+  }
+  
+  h1::first-letter{
+    color: #1903A6;
+    
+    font-size: 100px;
+  }
+  h1{
+    
+  text-align: center;
+  text-shadow:2px 1px whitesmoke;
+  color:#36BFA6;
+  margin-left: 50px;
+  width:70%;
+    
+  }
+  #forms{
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    
+    
+  }
+  
+  body {
+      background-color: #023E73;
+      padding: 10px;
+      
+      color: #CEDEF2;
+      padding-top: 30px;
+      
+    }
+  
+  
+    input[type="text"], input[type="number"] {
+      height: 10px;
+     width: 200px;
+      border: none;
+      padding: 10px;
+      margin-left: 5%;
+      background-color:#04C4D9;
+      outline-color: whitesmoke;
+      
+  }
+  placeholder{
+    color: whitesmoke;
+  }
+  
+   button:hover{
+     background-color: #A69B03;
+   }
+  button{
+      padding-left: 5px; 
+      font-size: 15px;
+     margin-left: 100px;
+      margin-top:10px;
+      width: 7%;
+      border-style: none;
+      border-radius: 50%;
+      height: 60px;
+       background-color: #7833A6;
+       color: whitesmoke;
+       
+    }
+    #submit{
+      margin-top:20px;
+      margin-right: 20px;
+    }
+  ul {
+    box-sizing: border-box;
+    border: 2px solid #A69B03;
+    margin-left: 10%;
+    width: 80%;
+    
+  }
+  li {
+    border-bottom: 2px solid #04C4D9;
+  
+    width: 80%;
+    text-decoration: none;
+    font-size: large;
+    padding-top: 10px;
+    margin-left: 2%;
+    overflow: hidden;
+  
+  }

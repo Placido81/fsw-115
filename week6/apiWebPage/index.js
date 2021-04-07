@@ -2,7 +2,7 @@ async function getMovieData(){
     
   //API 1:
      const response = await axios.get("http://swapi.dev/api/people/1/")
-               const films = response.data.films[0]
+               const films = response.data.films[1]
                const movie = await axios.get(films)
                const title = movie.data.title
                const script = movie.data.director
